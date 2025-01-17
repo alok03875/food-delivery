@@ -35,9 +35,6 @@ app.use("/api/order", orderRouter);
 // Serve the main frontend static files
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.use('*', (req, res, next) => {
-    if (req.originalUrl.startsWith('/admin')) {
-        return next(); // Skip to the next middleware for /admin routes
-    }
     res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
 });
 
