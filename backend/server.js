@@ -11,7 +11,7 @@ import { fileURLToPath } from "url";
 
 // app config
 const app = express()
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 
 // middleware
 app.use(express.json())         // to parse req from fruntend to backend
